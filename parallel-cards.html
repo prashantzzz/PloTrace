@@ -1,0 +1,40 @@
+<!doctype html>
+<html data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>  <!--class="bg-[url('/bg.jpg')]"-->
+
+  <div class="flex h-screen justify-center items-center">
+      <!-- Left Card -->
+      <div class="card w-90 bg-base-200 shadow-xl p-6 mr-6">  
+        <div class="card-body">
+          <h2 class="card-title">Left Card Title</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-info">Start Plotting</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Card -->
+      <div class="card w-300 bg-base-200 shadow-xl p-6 ml-6">  
+        <div class="card-body">
+          <h2 class="card-title">Right Card Title</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Start Plotting</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</body>
+</html>
+
+<!-- run this everytime when adding code
+npx tailwindcss -i ./input.css -o ./output.css --watch
+-->

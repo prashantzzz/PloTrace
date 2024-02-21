@@ -68,17 +68,21 @@
           placeholder="Graph matrix">
 {
   "nodes": [
-      {"id": "A", "group": 1},
-      {"id": "B", "group": 2},
-      {"id": "C", "group": 2},
-      {"id": "D", "group": 3}
+    {"id": "A", "group": 1},
+    {"id": "B", "group": 2},
+    {"id": "C", "group": 2},
+    {"id": "D", "group": 3},
+    {"id": "E", "group": 3}
   ],
   "links": [
-      {"source": "A", "target": "B", "value": 1},
-      {"source": "B", "target": "C", "value": 2},
-      {"source": "C", "target": "D", "value": 3}
+    {"source": "A", "target": "B", "value": 1},
+    {"source": "B", "target": "C", "value": 2},
+    {"source": "C", "target": "D", "value": 3},
+    {"source": "D", "target": "E", "value": 2},
+    {"source": "E", "target": "A", "value": 1}
   ]
 }
+          
 </textarea>
         <p></p>
         <div class="form-control">

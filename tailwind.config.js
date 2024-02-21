@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"), require("tailwind-scrollbar-daisyui")],
+  plugins: [require("daisyui"), require("tailwind-scrollbar-daisyui"), require("d3")],
   daisyui: {
-    themes: ["light", "dark", "valentine", "coffee", "forest", "retro"],
+    themes: ["light", "dark", "valentine", "coffee"],
   },
   variants: {
     scrollbar: ["dark"],

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to plot graph using D3.js
   function plotGraph(data) {
+    var dataTheme = document.documentElement.getAttribute('data-theme');
     try {
       const graphData = JSON.parse(data);
   
@@ -46,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .data(graphData.nodes)
         .join('text')
         .text(d => d.id)
-        .attr('x', 12) // Adjust position of text relative to circles
-        .attr('y', 4)  // Adjust position of text relative to circles
+        .attr('x', 20) // Adjust position of text relative to circles
+        .attr('y', 12)  // Adjust position of text relative to circles
         .attr('fill', 'white');
   
       // Add titles to nodes
@@ -87,9 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     } catch (error) {
       console.error('Error plotting graph:', error);
+      output.innerText("Error plotting graph");
     }
   }
-  
+  plotGraph(infield.value);
 
   // For debouncing
   let timeoutIdDebounce;

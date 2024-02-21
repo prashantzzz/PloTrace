@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
           .on('drag', dragged)
           .on('end', dragended));
   
+      //setting text color variable based on theme 
+      var colr ='white';
+      if(dataTheme=='light' || dataTheme=='valentine'){ colr='black';}
       // Append text labels for nodes
       const text = svg.append('g')
         .selectAll('text')
@@ -49,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .text(d => d.id)
         .attr('x', 20) // Adjust position of text relative to circles
         .attr('y', 12)  // Adjust position of text relative to circles
-        .attr('fill', 'white');
-  
+        .attr('fill', colr);
+   
       // Add titles to nodes
       node.append('title')
         .text(d => d.id);
@@ -118,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const nextIndex = (currentIndex + 1) % themes.length; // Loop through themes
       const nextTheme = themes[nextIndex];
       document.documentElement.setAttribute("data-theme", nextTheme);
+      plotGraph(infield.value);
   }
 
   // Add click event listener to the theme button

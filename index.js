@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     } catch (error) {
       console.error('Error plotting graph:', error);
-      output.innerText("Error plotting graph");
+      output.innerHTML("Error plotting graph");
     }
   }
   plotGraph(infield.value);

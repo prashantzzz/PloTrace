@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .selectAll('line')
         .data(graphData.links)
         .join('line')
-        .attr('stroke-width', d => Math.sqrt(d.value) * 2); // Adjust link width
+        .attr('stroke-width', d => 4); // Adjust link width
   
       const node = svg.append('g')
         .selectAll('circle')

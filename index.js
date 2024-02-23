@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .selectAll('circle')
         .data(graphData.nodes)
         .join('circle')
-        .attr('r', 10) // Increase circle radius for larger circles
+        .attr('r', 11) // Increase circle radius for larger circles
         .attr('fill', '#69b3a2')
         .call(d3.drag()
           .on('start', dragstarted)
@@ -43,20 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
   
       //setting text color variable based on theme 
       var colr ='white';
-      if(dataTheme=='light' || dataTheme=='valentine'){ colr='black';}
+      if(dataTheme=='light' || dataTheme=='valentine'){ colr='grey';}
       // Append text labels for nodes
       const text = svg.append('g')
         .selectAll('text')
         .data(graphData.nodes)
         .join('text')
         .text(d => d.id)
-        .attr('x', 20) // Adjust position of text relative to circles
-        .attr('y', 12)  // Adjust position of text relative to circles
-        .attr('fill', colr);
+        .attr('x',0) // Adjust position of text relative to circles
+        .attr('y',0)  // Adjust position of text relative to circles
+        .attr('fill', colr)
+        .style('font-weight', 'bold'); // Make the text bold  
    
-      // Add titles to nodes
-      node.append('title')
-        .text(d => d.id);
+      // Add titles to nodes WHEN HOVERED
+      // node.append('title')
+      //   .text(d => d.id);
   
       // Update node and link positions on each tick
       simulation.on('tick', () => {
